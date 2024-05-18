@@ -35,6 +35,15 @@ Refer to this [Windows Setup Guide](windows-setup-guide.md)
 It may be necessary in some cases to separately install the SDL libraries.  
 4. Run:  
 ```python run_pretrained_interactive.py```
+
+### Raspberry Pi 4 Setup
+1. Move to the /opt/ directory
+2. ```sudo apt install python3-venv ffmpeg -y && python3 -m venv /opt/PokemonRedExperiments/baselines/env && source /opt/PokemonRedExperiments/baselines/env/bin/activate && pip3 install -r /opt/PokemonRedExperiments/baselines/requirements.txt```
+This may take awhile. Consider HTTP 418 while you wait.
+3. Copy your legally obtained Pokemon Red ROM into the base directory. You can find this using google, it should be 1MB. Rename it to `PokemonRed.gb` if it is not already. The sha1 sum should be `ea9bcae617fdf159b045185467ae58b2e4a48b9a`, which you can verify by running `shasum PokemonRed.gb`. 
+It may be necessary in some cases to separately install the SDL libraries.  
+4. Run:  
+```python run_pretrained_interactive.py```
   
 Interact with the emulator using the arrow keys and the `a` and `s` keys (A and B buttons).  
 You can pause the AI's input during the game by editing `agent_enabled.txt`
